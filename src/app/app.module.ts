@@ -10,6 +10,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { ChitietComponent } from './chitiet/chitiet.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { QlyteComponent } from './qlyte/qlyte.component';
+import { TypeComponent } from './type/type.component';
+import { TintucComponent } from './tintuc/tintuc.component';
 
 
 
@@ -26,7 +28,17 @@ const routes: Routes = [
   {
     path:'qlye',
     component: QlyteComponent,
+  },
+  {
+    path:'tintuc',
+    component: TintucComponent,
+  },
+  {
+    path:'type/:id',
+    component: TypeComponent,
   }
+  
+ 
 ];
 
 @NgModule({
@@ -36,7 +48,9 @@ const routes: Routes = [
     FooterComponent,
     MainComponent,
     ChitietComponent,
-    QlyteComponent
+    QlyteComponent,
+    TypeComponent,
+    TintucComponent
   ],
   imports: [
     BrowserModule,

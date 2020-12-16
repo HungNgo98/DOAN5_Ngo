@@ -17,7 +17,7 @@ export class HeaderComponent extends BaseComponent implements OnInit {
     this.list_menu = {};
     this._route.params.subscribe(params => {
       let id = params['id'];
-      this._api.get('/api/menu/get-menu-id/'+id).takeUntil(this.unsubscribe).subscribe(res => {
+      this._api.get('/api/menu/get-menu-all/').takeUntil(this.unsubscribe).subscribe(res => {
         this.list_menu = res;
         console.log(res);
         setTimeout(() => {

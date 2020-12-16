@@ -27,17 +27,17 @@
                         <a href="shop-4-column.html" class="view-all-btn">View All</a>
                     </div>
                 </div> -->
-                <div class="category-slider-item swiper-slide" *ngFor="let it of list_item">
+                <div class="category-slider-item swiper-slide" *ngFor="let it of prom">
                     <div class="thumb-category">
-                        <a href="single-product.html">
+                        <a [routerLink]="['/chitiet',it.iD_PROD]">
                             <img src="{{ it.img }}" alt="product-image.jpg" />
                         </a>
                     </div>
                     <div class="category-discript">
-                        <h4>Audio & Video</h4>
+                        <h4>{{ it.namE_PROD}}</h4>
                         <ul>
-                            <li><a href="#">{{ it.namE_PROD}}</a></li>
-                            <li><a href="#">{{ it.price}}</a></li>
+                            <li><a href="#">{{ it.price}},000VNĐ</a></li>
+                           
                             <!-- <li><a href="#">Projectors</a></li>
                             <li><a href="#">TV Sticks</a></li> -->
                         </ul>
@@ -135,10 +135,10 @@
         <div class="feature-slider slider-nav-style-1" >
             <div class="feature-slider-wrapper swiper-wrapper"  >
                 <!-- Single Item -->
-                <div class="feature-slider-item swiper-slide" *ngFor="let it of list_item" >
+                <div class="feature-slider-item swiper-slide" *ngFor="let it of new" >
                     <article class="list-product">
                         <div class="img-block">
-                            <a href="single-product.html" class="thumbnail">
+                            <a [routerLink]="['/chitiet',it.iD_PROD]" class="thumbnail">
                                 <img class="first-img" src="{{ it.img }}" alt="" />
                                 
                             </a>
@@ -153,7 +153,7 @@
                         </ul>
                         <div class="product-decs">
                             <a class="inner-link" href="shop-4-column.html"><span>{{ it.namE_PROD }}</span></a>
-                            <h2><a href="single-product.html" class="product-link"> {{ it.price }}</a></h2>
+                            <h2><a href="single-product.html" class="product-link"> {{ it.price }},000VNĐ</a></h2>
                             <div class="rating-product">
                                 <i class="ion-android-star"></i>
                                 <i class="ion-android-star"></i>
